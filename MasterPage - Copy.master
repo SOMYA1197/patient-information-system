@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+**********
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    
+</head>
+<body>
+    <form id="form1" runat="server">   
+    <div>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <table>
+           <tr>
+               <td colspan="2" style="width:800px; height:20px; background-color:azure;">
+               <h1>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Patient Information System</h1>
+                   </td>
+           </tr>
+            <tr>
+               <td  style=" height:500px;width:80px; background-color:aqua;">
+               
+                   <asp:Menu ID="Menu1" ForeColor="black" runat="server" DisappearAfter="2000" OnMenuItemClick="Menu1_MenuItemClick">
+                       <StaticMenuStyle CssClass="MenuStyle"/>
+                       <StaticMenuItemStyle BorderColor="White" BorderWidth="1px" BorderStyle="Solid" />
+                       <StaticHoverStyl" />
+                       <StaticSelee Font-Bold="truectedStyle BackColor="Black" />
+
+                       <DynamicMenuStyle BackColor="Red" />
+                       <DynamicMenuItemStyle BorderColor="blue" BorderWidth="1" BorderStyle="Solid" />
+                       <DynamicHoverStyle Font-Bold="true" />
+                       <DynamicSelectedStyle BackColor="black" />
+                       <Items>
+                           <asp:MenuItem Text="Home" NavigateUrl="~/Default.aspx" Value="Home"></asp:MenuItem>
+                           <asp:MenuItem Text="Login" NavigateUrl="~/Default2.aspx" Value="Employee">
+                               <asp:MenuItem Text="Upload" NavigateUrl="~/Default.aspx" Value="Upload"></asp:MenuItem>
+                               <asp:MenuItem Text="Review" NavigateUrl="~/Default.aspx" Value="Review"></asp:MenuItem>
+                               <asp:MenuItem Text="Edit" NavigateUrl="~/Default2.aspx" Value="Edit"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Contact" NavigateUrl="~/Default.aspx" Value="Employer">
+                               <asp:MenuItem Text="Upload" NavigateUrl="~/Default.aspx" Value="Upload"></asp:MenuItem>
+                               <asp:MenuItem Text="Review" NavigateUrl="~/Default.aspx" Value="Review"></asp:MenuItem>
+                               <asp:MenuItem Text="Edit" NavigateUrl="~/Default2.aspx" Value="Edit"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="About Us" NavigateUrl="~/Default.aspx" Value="Admin">
+                               <asp:MenuItem Text="Review" NavigateUrl="~/Default.aspx" Value="Review"></asp:MenuItem>
+                               <asp:MenuItem Text="Edit" NavigateUrl="~/Default2.aspx" Value="Edit"></asp:MenuItem>
+                           </asp:MenuItem>
+                               
+                       </Items>
+                   </asp:Menu>      
+               
+                   </td>
+           
+            
+               <td  style="width:650px ; height:500px;background-color:beige">
+             
+                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">  
+               <h2>
+                         Breast Cancer 
+               </h2>
+                   </asp:ContentPlaceHolder>
+                 
+                   </td>
+           </tr>
+            <tr>
+               <td colspan="2" style=" background-color:azure;text-align:center;">
+               <h1>
+                   Patient Information System
+               </h1>
+                   </td>
+           </tr>
+            
+       </table>
+    </div>
+    </form>
+</body>
+</html>
